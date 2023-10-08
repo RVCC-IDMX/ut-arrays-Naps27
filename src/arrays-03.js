@@ -32,7 +32,8 @@ function addUpArrayElements(arr) {
  * ? must use the map() array method - https://youtu.be/nO4fLugOX9k
  */
 function makeSquareNumbers(arr) {
-
+  const squaredArray = arr.map((number) => number * number);
+  return squaredArray;
 }
 
 /**
@@ -46,6 +47,8 @@ function makeSquareNumbers(arr) {
  * ? must use the filter() array method - https://youtu.be/JY5HUDMudew
  */
 function filterForLargeWords(arr, length) {
+  const filteredArray = arr.filter((word) => word.length > length);
+  return filteredArray;
 }
 
 /**
@@ -56,91 +59,101 @@ function filterForLargeWords(arr, length) {
  * ? must use the find() array method - https://youtu.be/KCx0mQEC4Zw
  */
 function findTheFirstEvenNumber(arr) {
-  // write your code here & return value
+  const firstEvenNumber = arr.find((number) => number % 2 === 0);
+  return firstEvenNumber;
 }
 
 /**
- * Sorts an array of words alphabetically
- * @param {array} arr - the array of words to sort
- * @returns {array} - a new array with the words sorted in alphabetical order
- * ?  order is ascending and case sensitive
- * ? example: ["ant", "Bug", "cat", "Dog"] => ["Bug","Dog","ant","cat"]
- * ? must use the sort() array method - https://youtu.be/3bLjcUmWveA
- */
+   * Sorts an array of words alphabetically
+   * @param {array} arr - the array of words to sort
+   * @returns {array} - a new array with the words sorted in alphabetical order
+   * ?  order is ascending and case sensitive
+   * ? example: ["ant", "Bug", "cat", "Dog"] => ["Bug","Dog","ant","cat"]
+   * ? must use the sort() array method - https://youtu.be/3bLjcUmWveA
+   */
 function sortCaseSensitive(arr) {
-  // write your code here & return value
+  const sortedArray = arr.slice().sort();
+  return sortedArray;
 }
 
 /**
- * Joins together all the elements of an array into a string
- * @param {array} arr  - the array of words to join
- * @param {string} separator - the string to use as a separator
- * @returns {string} - a string with all the words joined together
- * ? example: ["ant", "Bug", "cat", "Dog"], separator = '' => 'antBugcatDog'
- * ? example: ["ant", "Bug", "cat", "Dog"], separator = '-' => 'ant-Bug-cat-Dog'
- * ? must the join() array method - https://youtu.be/90MVWda5DlM
- */
+   * Joins together all the elements of an array into a string
+   * @param {array} arr  - the array of words to join
+   * @param {string} separator - the string to use as a separator
+   * @returns {string} - a string with all the words joined together
+   * ? example: ["ant", "Bug", "cat", "Dog"], separator = '' => 'antBugcatDog'
+   * ? example: ["ant", "Bug", "cat", "Dog"], separator = '-' => 'ant-Bug-cat-Dog'
+   * ? must the join() array method - https://youtu.be/90MVWda5DlM
+   */
 function makeTheString(arr, separator) {
-  // write your code here & return value
+  const joinedString = arr.join(separator);
+  return joinedString;
 }
 
 /**
- * Take an array and reverse the elements
- * @param {array} arr - the array to reverse
- * @returns {array} - a new array with the elements reversed
- * ? example: [1, 2, 3, 4, 5] => [5, 4, 3, 2, 1]
- * ? must use the reverse on a shallow copy of the original array
- */
+   * Take an array and reverse the elements
+   * @param {array} arr - the array to reverse
+   * @returns {array} - a new array with the elements reversed
+   * ? example: [1, 2, 3, 4, 5] => [5, 4, 3, 2, 1]
+   * ? must use the reverse on a shallow copy of the original array
+   */
 function reverseTheArray(arr) {
-  // write your code here & return value
+  const reversedArray = arr.slice();
+  reversedArray.reverse();
+  return reversedArray;
 }
 
 /**
- * Adds additional elements to the end of an array to make it a mirror
- * @param {array} arr - the array to make into a mirror
- * @returns {array} - a new array with the elements added to mirror the original
- * ? example: [ 1, 2, 3] => [1, 2, 3, 2, 1]
- * ? example: [ 1, 2, 3, 4] => [1, 2, 3, 4, 3, 2, 1]
- */
+   * Adds additional elements to the end of an array to make it a mirror
+   * @param {array} arr - the array to make into a mirror
+   * @returns {array} - a new array with the elements added to mirror the original
+   * ? example: [ 1, 2, 3] => [1, 2, 3, 2, 1]
+   * ? example: [ 1, 2, 3, 4] => [1, 2, 3, 4, 3, 2, 1]
+   */
 function makeMirrorArray(arr) {
-  // write your code here & return value
+  const mirroredArray = arr.slice();
+  const reversedArray = arr.slice(1).reverse();
+  const resultArray = mirroredArray.concat(reversedArray);
+  return resultArray;
 }
 
 /**
- * Creates a slice of array with n elements dropped from the end
- * @param {array} arr - the array
- * @param {number} n - the number (integer) of elements at the end to drop
- * @returns {array} - a new array with the n elements dropped from the end
- * ? example: [1, 2, 3, 4, 5], n = 2 => [1, 2, 3]
- * ? example: [1, 2, 3, 4, 5], n = 3 => [1, 2]
- * ? must use the slice() array method - https://youtu.be/ok-dya7hNm0
- */
+   * Creates a slice of array with n elements dropped from the end
+   * @param {array} arr - the array
+   * @param {number} n - the number (integer) of elements at the end to drop
+   * @returns {array} - a new array with the n elements dropped from the end
+   * ? example: [1, 2, 3, 4, 5], n = 2 => [1, 2, 3]
+   * ? example: [1, 2, 3, 4, 5], n = 3 => [1, 2]
+   * ? must use the slice() array method - https://youtu.be/ok-dya7hNm0
+   */
 function dropRight(arr, n) {
-  // write your code here & return value
+  const slicedArray = arr.slice(0, -n);
+  return slicedArray;
 }
 
 /**
- * Creates a slice of array with n elements dropped from the beginning
- * @param {array} arr - the array
- * @param {number} n - the number of elements to take from the beginning
- * @returns {array} - a new array with the n elements taken from the beginning
- * ? example: [1, 2, 3, 4, 5], n = 2 => [3, 4, 5]
- * ? example: [1, 2, 3, 4, 5], n = 3 => [4, 5]
- * ? must use the slice() array method - https://youtu.be/ok-dya7hNm0
- */
+   * Creates a slice of array with n elements dropped from the beginning
+   * @param {array} arr - the array
+   * @param {number} n - the number of elements to take from the beginning
+   * @returns {array} - a new array with the n elements taken from the beginning
+   * ? example: [1, 2, 3, 4, 5], n = 2 => [3, 4, 5]
+   * ? example: [1, 2, 3, 4, 5], n = 3 => [4, 5]
+   * ? must use the slice() array method - https://youtu.be/ok-dya7hNm0
+   */
 function dropLeft(arr, n) {
-  // write your code here & return value
+  const slicedArray = arr.slice(n);
+  return slicedArray;
 }
 
 /**
- * Checks if an array contains a given number
- * @param {array} arr the array to check
- * @param {*} val - the test value to check
- * @returns {boolean} - true if the array contains the value, false otherwise
- * ? example: [1, 2, 3, 4, 5], val = 3 => true
- * ? example: [1, 2, 3, 4, 5], val = 6 => false
- * ? must use the includes() array method - https://youtu.be/GNnHej31OGY
- */
+   * Checks if an array contains a given number
+   * @param {array} arr the array to check
+   * @param {*} val - the test value to check
+   * @returns {boolean} - true if the array contains the value, false otherwise
+   * ? example: [1, 2, 3, 4, 5], val = 3 => true
+   * ? example: [1, 2, 3, 4, 5], val = 6 => false
+   * ? must use the includes() array method - https://youtu.be/GNnHej31OGY
+   */
 function checkArrayForValue(arr, val) {
-  // write your code here & return value
+  return arr.includes(val);
 }
