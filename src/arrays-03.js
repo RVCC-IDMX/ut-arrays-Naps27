@@ -111,10 +111,10 @@ function reverseTheArray(arr) {
    * ? example: [ 1, 2, 3, 4] => [1, 2, 3, 4, 3, 2, 1]
    */
 function makeMirrorArray(arr) {
-  const mirroredArray = arr.slice();
-  const reversedArray = arr.slice(1).reverse();
-  const resultArray = mirroredArray.concat(reversedArray);
-  return resultArray;
+  const mirroredArray = [...arr];
+  const reversedArray = mirroredArray.slice(0, mirroredArray.length - 1).reverse();
+  const result = mirroredArray.concat(reversedArray);
+  return result;
 }
 
 /**
@@ -157,3 +157,17 @@ function dropLeft(arr, n) {
 function checkArrayForValue(arr, val) {
   return arr.includes(val);
 }
+
+module.exports = {
+  addUpArrayElements,
+  makeSquareNumbers,
+  filterForLargeWords,
+  findTheFirstEvenNumber,
+  sortCaseSensitive,
+  makeTheString,
+  reverseTheArray,
+  makeMirrorArray,
+  dropRight,
+  dropLeft,
+  checkArrayForValue,
+};
