@@ -17,7 +17,11 @@
  * ? must use the forEach() array method - https://youtu.be/GNXZpM-15Xg
  */
 function addUpArrayElements(arr) {
-  // write your code here & return value
+  let sum = 0;
+  arr.forEach((number) => {
+    sum += number;
+  });
+  return sum;
 }
 
 /**
@@ -28,7 +32,7 @@ function addUpArrayElements(arr) {
  * ? must use the map() array method - https://youtu.be/nO4fLugOX9k
  */
 function makeSquareNumbers(arr) {
-  // write your code here & return value
+
 }
 
 /**
@@ -42,7 +46,6 @@ function makeSquareNumbers(arr) {
  * ? must use the filter() array method - https://youtu.be/JY5HUDMudew
  */
 function filterForLargeWords(arr, length) {
-  // write your code here & return value
 }
 
 /**
@@ -141,17 +144,3 @@ function dropLeft(arr, n) {
 function checkArrayForValue(arr, val) {
   // write your code here & return value
 }
-
-module.exports = {
-  addUpArrayElements,
-  makeSquareNumbers,
-  filterForLargeWords,
-  findTheFirstEvenNumber,
-  sortCaseSensitive,
-  makeTheString,
-  reverseTheArray,
-  makeMirrorArray,
-  dropRight,
-  dropLeft,
-  checkArrayForValue,
-};

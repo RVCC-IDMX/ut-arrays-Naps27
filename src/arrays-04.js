@@ -17,7 +17,7 @@
  * ? hint: use Math.abs() to get the absolute value of a number
  */
 function getAbsoluteSum(nums) {
-  // write your code here & return value
+
 }
 
 /**
